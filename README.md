@@ -2,7 +2,6 @@
 
 This project tests whether artificial intelligence can predict **how much longer a machine will keep working** before it fails, using only its sensor readings. It compares two AI models on the NASA CMAPSS jet engine dataset and was developed for the essay *Predictive Maintenance in Smart Manufacturing: Evaluating AI Models for Equipment Failure Prediction* (MSc in Artificial Intelligence, Berlin School of Business and Innovation).
 
-!\[Experimental pipeline](figures/fig\_pipeline\_flowchart.png)
 
 ## The problem in plain words
 
@@ -60,23 +59,16 @@ For RMSE, MAE and the NASA score, lower is better. An alert is raised when the p
 ```
 ├── README.md
 ├── requirements.txt
-├── predictive\_maintenance\_rf\_vs\_lstm.ipynb   # step-by-step notebook with explanations
-├── data/
-│   └── CMaps/                                # NASA CMAPSS text files (train, test, RUL)
+├── Predictive\_maintenance\_rf\_vs\_lstm\_Enrique\_Garcia.ipynb   # step-by-step notebook with explanations
+├── Dataset.zip
+│   └── files (unzip before running)                               # NASA CMAPSS text files (train, test, RUL)
 └── figures/                                  # charts produced by the notebook
 ```
 
 ## How to run it
 
-1. Clone this repository and install the libraries:
-
-```
-   pip install -r requirements.txt
-   ```
-
-2. Open the notebook in Jupyter and run all cells from top to bottom. The notebook finds the data files automatically inside the project folder.
-3. Training the LSTM with cross-validation takes around 15 to 30 minutes on a laptop without a GPU. To make it faster, set `LSTM\_CV = False` in Step 0.
-
+1. Unzip `Dataset.zip` inside the project folder, then open the notebook in Jupyter and run all cells from top to bottom. The notebook finds the data files automatically.
+2. Training the LSTM with cross-validation takes around 15 to 30 minutes on a laptop without a GPU. To make it faster, set `LSTM\\\\\\\_CV = False` in Step 0.
 The results above were produced with Python 3, TensorFlow 2.21.0 and SHAP 0.52.0. Small differences in the LSTM results between runs and computers are normal.
 
 ## Limitations and next steps
